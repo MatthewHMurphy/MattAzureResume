@@ -15,4 +15,4 @@ jobs:
           inlineScript: |
             az storage blob upload-batch --destination \$web --source . --account-name <staticresumeplatform> --account-key <efDTnD9OBX3Tr3m65IEm6L0TW26BJ/f1jAe7+cGWdbvoKvg333LezY4H96H+RQj5p7ftJWlaSweL+ASt007EHw==> --pattern "**"
         env:
-          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.DefaultEndpointsProtocol=https;AccountName=staticresumeplatform;AccountKey=op6vMHSgPxYQoa+SB6Ynw+C398dqL/CQjpo8YG/GWSGV+lSUmG2cr5fuycV4p/rPxZZV9qcCvnQo+AStTM1/NA==;EndpointSuffix=core.windows.net }}
