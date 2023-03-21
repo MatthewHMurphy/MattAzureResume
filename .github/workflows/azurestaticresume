@@ -1,0 +1,19 @@
+name: Deploy to Azure Blob Storage
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Upload to Blob Storage
+        uses: azure/CLI@v1
+        with:
+          inlineScript: |
+            az storage blob upload-batch --destination \$web --source . --account-name <staticresumeplatform> --account-key <op6vMHSgPxYQoa+SB6Ynw+C398dqL/CQjpo8YG/GWSGV+lSUmG2cr5fuycV4p/rPxZZV9qcCvnQo+AStTM1/NA==> --pattern "**"
+        env:
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.efDTnD9OBX3Tr3m65IEm6L0TW26BJ/f1jAe7+cGWdbvoKvg333LezY4H96H+RQj5p7ftJWlaSweL+ASt007EHw==
+ }}
