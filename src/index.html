@@ -14,48 +14,11 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
-        <!DOCTYPE html>
-    <head>
-        <meta charset="UTF-8">
-        <title>My Static Web App</title>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-3YrmB9CmEgo8RbW26DeB/w/gVV04znhJUMtsQ5n5a5xST6lvmHQ/79J9lqobAG/xDEyA6mctJ6EhU6IjZ6GGDw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-        <!-- Resume Theme CSS -->
-        <link rel="stylesheet" href="https://cdn.startbootstrap.com/sb-forms-latest/css/styles.css">
-
-        <!-- Resume Theme JS -->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest/js/scripts.js"></script>
-
-        <!-- Custom Script -->
-        <script>
-        window.addEventListener('DOMContentLoaded', event => {
-
-      // Activate Bootstrap scrollspy on the main nav element
-      const sideNav = document.body.querySelector('#sideNav');
-      if (sideNav) {
-          new bootstrap.ScrollSpy(document.body, {
-              target: '#sideNav',
-              offset: 74,
-          });
-      };
-
-      // Collapse responsive navbar when toggler is visible
-      const navbarToggler = document.body.querySelector('.navbar-toggler');
-      const responsiveNavItems = [].slice.call(
-          document.querySelectorAll('#navbarResponsive .nav-link')
-      );
-      responsiveNavItems.map(function (responsiveNavItem) {
-          responsiveNavItem.addEventListener('click', () => {
-              if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                  navbarToggler.click();
-              }
-          });
-      });
-
-    });
-  </script>
-</head>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+   </body>
+</html>
+    </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
@@ -66,7 +29,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Abut</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
