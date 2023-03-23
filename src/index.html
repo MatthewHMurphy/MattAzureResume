@@ -16,20 +16,48 @@
         <link href="css/styles.css" rel="stylesheet" />
         <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
-   </body>
-</html>
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha512-B6RZU6QZU9jJ7ztTj58RSTgTQ2+TJJJj0bm/yrL1ZpE3Fq3X9V7JGc82v4V7gW8tMgxO7jMIwJvSIPtZb8tG1g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- Bootstrap JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.min.js" integrity="sha512-KYrmfzG7pWn3av9b0/9fmcfeLhCxG0y3qADopUeY6UwK6U/W2Z0ij9X9H2QotPDXXgK/YyKxh5O5p5Y5wZrDdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- Add the JavaScript code here -->
+        <script>
+            window.addEventListener('DOMContentLoaded', event => {
+          
+              // Activate Bootstrap scrollspy on the main nav element
+              const sideNav = document.body.querySelector('#sideNav');
+              if (sideNav) {
+                new bootstrap.ScrollSpy(document.body, {
+                  target: '#sideNav',
+                  offset: 74,
+                });
+              };
+          
+              // Collapse responsive navbar when toggler is visible
+              const navbarToggler = document.body.querySelector('.navbar-toggler');
+              const responsiveNavItems = [].slice.call(
+                document.querySelectorAll('#navbarResponsive .nav-link')
+              );
+              responsiveNavItems.map(function (responsiveNavItem) {
+                responsiveNavItem.addEventListener('click', () => {
+                  if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                    navbarToggler.click();
+                  }
+                });
+              });
+          
+            });
+          </script>
+          <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
                 <span class="d-block d-lg-none">Matthew Murphy</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="C:\Users\murph\Pictures\Saved Pictures\Matthew_profile_pic.jpg" alt="..." /></span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="https://i.ibb.co/H4zB5LL/Matthew-profile-pic.jpg" alt="..." /></span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Abut</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
